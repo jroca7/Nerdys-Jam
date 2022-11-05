@@ -10,6 +10,7 @@ TagManager:
   - WallRight
   - Enemy
   - Bullet
+  - changeJump
   layers:
   - Default
   - TransparentFX

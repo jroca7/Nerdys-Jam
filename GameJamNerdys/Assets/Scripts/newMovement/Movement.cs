@@ -30,12 +30,17 @@ public class Movement : MonoBehaviour
     public bool wallSlide;
     public bool isDashing;
     public bool hasLife;
+    [SerializeField]
+    private bool gameRunning;
 
-    [Space]
+
+[Space]
     private bool groundTouch;
-    private bool hasDashed;
+    //private bool hasDashed;
 
     public int side = 1;
+
+
 
 
 
@@ -169,7 +174,31 @@ public class Movement : MonoBehaviour
             Invoke("cooldown", 0.1f);
         }
 
+        
     }
+
+    //private void OnTriggerStay2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("changeJump") && (Input.GetKey("e")))
+    //    {
+    //        Time.timeScale = 0.1f;
+
+    //    }
+    //}
+
+    //public void ChangeGameRunningState()
+    //{
+    //    gameRunning = !gameRunning;
+
+    //    if (gameRunning)
+    //    {
+    //        Time.timeScale = 1f;
+    //    }
+    //    else
+    //    {
+    //        Time.timeScale = 0.1f;
+    //    }
+    //}
 
     void cooldown()
     {
@@ -244,7 +273,7 @@ public class Movement : MonoBehaviour
         //Camera.main.transform.DOCompplete
 
 
-        hasDashed = true;
+        //hasDashed = true;
         //anim.setTrigger("dash");
 
         rb.velocity = Vector2.zero;
@@ -278,8 +307,8 @@ public class Movement : MonoBehaviour
     IEnumerator GroundDash()
     {
         yield return new WaitForSeconds(0.15f);
-        if (coll.onGround)
-            hasDashed = false;
+        //if (coll.onGround)
+            //hasDashed = false;
     }
 
     IEnumerator DisableMovement (float time)
@@ -291,7 +320,7 @@ public class Movement : MonoBehaviour
 
     private void GroundTouch()
     {
-        hasDashed = false;
+        //hasDashed = false;
         isDashing = false;
 
         // side= anim.sr.flipX ? -1 : 1;
