@@ -17,14 +17,6 @@ public class Bullet : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
     }
 
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown("f"))
-    //    {
-
-    //        rb.velocity = new Vector2(-moveDirection.x, -moveDirection.y);
-    //    }
-    //}
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (this.CompareTag("Enemy"))

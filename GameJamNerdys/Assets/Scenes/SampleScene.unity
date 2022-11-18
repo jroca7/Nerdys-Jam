@@ -1079,7 +1079,7 @@ GameObject:
   - component: {fileID: 1670103501}
   m_Layer: 0
   m_Name: Instance_Point
-  m_TagString: Untagged
+  m_TagString: InstancePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1376,17 +1376,17 @@ GameObject:
   m_Component:
   - component: {fileID: 1823095939}
   - component: {fileID: 1823095938}
-  - component: {fileID: 1823095937}
   - component: {fileID: 1823095936}
   - component: {fileID: 1823095935}
   - component: {fileID: 1823095934}
+  - component: {fileID: 1823095937}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!70 &1823095934
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   player_pos: {fileID: 1877156810}
   instance_point: {fileID: 1670103501}
   bullet: {fileID: 1648258896766763048, guid: 1c498728a128a2342897ba6476680308, type: 3}
-  time_bullet: 2
+  time_bullet: 0
 --- !u!212 &1823095938
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1753,7 +1753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c853121d386ed8342804249f82f7db4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lr: {fileID: 0}
+  lr: {fileID: 1877156815}
 --- !u!120 &1877156815
 LineRenderer:
   m_ObjectHideFlags: 0
